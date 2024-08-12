@@ -1,18 +1,22 @@
+// Gradient array
+let gradient = [
+  "linear-gradient(to right, #D8B5FF, #1EAE98)", 
+  "linear-gradient(to left, #D8B59F, #1EAE98)",
+  "linear-gradient(to top, #D8B59F, #1EA998)",
+  "linear-gradient(to top, #D8759F, #1EA998)"
+];
 
+// Function to apply a random gradient as the background
+function applyRandomGradient() {
+  // Get a random index from the gradient array
+  let randomIndex = Math.floor(Math.random() * gradient.length);
 
-function colorRandom() {
-  return Math.floor(Math.random() * (255 - 40) + 40);
+  // Apply the selected gradient as the background
+  document.body.style.background = gradient[randomIndex];
 }
-function backgroundColorRandom() {
-  let redA = colorRandom();
-  let greenA = colorRandom();
-  let blueA = colorRandom();
-  let redB = colorRandom();
-  let greenB = colorRandom();
-  let blueB = colorRandom();
-  document.body.style.background = `linear-gradient(45deg,rgb(${redA},${greenA},${blueA}),rgb(${redB},${greenB},${blueB}))`;
-}
-backgroundColorRandom();
+
+// Call the function on page load
+window.onload = applyRandomGradient;
 
 // select the container in which you want to display
 const text = "To get started; type help and press Enter !!";

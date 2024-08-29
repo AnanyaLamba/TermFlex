@@ -13,27 +13,50 @@ body{
 }
 .container
 {
-    background-color: rgba(0, 0, 0, 0.646);
+    background-color: rgba(0, 0, 0, 0.546);
     height: 85vh;
     width: 80vw;
     border-radius: 5px;
     margin-top: 10px;
     padding: 20px;
+
+    /* Apply animation to the container */
+    /* transform: translateY(-100%); */
+    animation: slide-in 1.5s ease-out;
+    transform-origin: center center;
     
 }
+
+
+@keyframes slide-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 .heading{
     display: flex;
     color: white;   
 }
 
 
-#yellow{
+#green{
     height: 1rem;
     width: 1rem;
     background-color: green;
     border-radius: 10px;
 }
-#green{
+#yellow{
     height: 1rem;
     width: 1rem;
     background-color: yellow;
@@ -58,7 +81,9 @@ body{
     width: 100%;
     text-align: center;
     margin-top: 5px;
-    font-size: 1.2em    ;
+    font-size: 1.1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-size: 1.2em    ; */
 }
 
 .content{
@@ -69,12 +94,87 @@ body{
     margin-top: 50px;
 }
 
-.curser{
-    color: transparent;
-    background-color: white;
-}
-
 .line_4{
     visibility: hidden;
 }
 
+/*curser pe animation aayega blink kerne ka */
+@keyframes blink-twice {
+    0%{opacity: 0.0;}
+    50%{opacity: 1.0;}
+    100%{opacity: 0.0;}
+  }
+ 
+  .curser {
+    color: transparent;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    /* display: inline-block; */
+    /* animation: blink-twice 500ms steps(1) infinite; */
+  }
+  .blinkCursor{
+    color: transparent;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    animation: blink-twice 500ms steps(1) infinite;
+  }
+
+.text1{
+    color:rgb(94, 230, 94);
+     font-size: 1.2em;
+     margin-right: 10px;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text2{
+    color: yellow;
+     font-size: 1.2em;
+     margin-right: 10px;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text3{
+    color: red;
+     font-size: 1.2em;
+     margin-right: 10px;
+}
+#change_command{
+    color: white; 
+    font-size: 1.1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hidden_content{
+    color: white; 
+    font-size: 1em; 
+    word-spacing: 0.5rem; 
+    line-height: 1.7rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#display{
+    color: white;
+     font-size: 1.2em; 
+     word-spacing: 0.4rem;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1em;
+}
+
+#help{
+    background-color: blue;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;       
+    font-size: 1em;
+}
+
+/* .line_1{
+    border: 2px solid;
+}
+.line_2{
+    border: 2px solid red;
+}
+.line_3
+{
+    border: 2px solid white;
+}
+line_4{
+    border: 2px solig green;
+} */
